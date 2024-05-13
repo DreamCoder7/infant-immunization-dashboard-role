@@ -1,9 +1,11 @@
 import config from "@/configs/config";
 import axios from "axios";
 
+const BASE_URL = import.meta.env.VITE_API;
+
 async function getChildren() {
   try {
-    const res = await axios.get(`${config.BASE_URL}/child/`, {
+    const res = await axios.get(`${BASE_URL}/child/`, {
       headers: {
         "Content-Type": "application/json",
         Authorization: config.AUTH_TOKEN,

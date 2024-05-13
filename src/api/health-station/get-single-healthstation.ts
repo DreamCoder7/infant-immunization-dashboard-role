@@ -1,9 +1,11 @@
-import config from "@/configs/config";
 import axios from "axios";
+
+const BASE_URL = import.meta.env.VITE_API;
+
 async function getSingleHealthStation(hsid: any) {
   try {
-    // const res = await axios.get(`${config.BASE_URL}/hs/info/detail/info`);
-    const res = await axios.get(`${config.BASE_URL}/hs/${hsid}`);
+    // const res = await axios.get(`${BASE_URL}/hs/info/detail/info`);
+    const res = await axios.get(`${BASE_URL}/hs/${hsid}`);
     console.log(res);
 
     const healthStation = res.data;

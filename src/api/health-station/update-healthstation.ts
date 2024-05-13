@@ -1,10 +1,13 @@
 import config from "@/configs/config";
 import axios from "axios";
+
+const BASE_URL = import.meta.env.VITE_API;
+
 async function updateHealthStation(hsid: any, reqBody: any) {
   try {
-    // const res = await axios.get(`${config.BASE_URL}/hs/info/detail/info`);
+    // const res = await axios.get(`${BASE_URL}/hs/info/detail/info`);
     const res = await axios.put(
-      `${config.BASE_URL}/hs/${hsid}`,
+      `${BASE_URL}/hs/${hsid}`,
       JSON.stringify(reqBody),
       {
         headers: {

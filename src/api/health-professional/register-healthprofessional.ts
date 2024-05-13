@@ -1,11 +1,13 @@
 import config from "@/configs/config";
 import axios from "axios";
 
+const BASE_URL = import.meta.env.VITE_API;
+
 async function registerHealthProfessional(hpData: any) {
-  console.log(config.BASE_URL);
+  console.log(BASE_URL);
   try {
     const res = await axios.post(
-      `${config.BASE_URL}/user/employee`,
+      `${BASE_URL}/user/employee`,
       JSON.stringify(hpData),
       {
         headers: {

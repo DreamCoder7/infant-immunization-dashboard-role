@@ -1,4 +1,3 @@
-import config from "@/configs/config";
 import axios from "axios";
 
 type HealthStationType =
@@ -43,7 +42,7 @@ async function CreateHealthStation(reqBody: HealthStationDto) {
     // });
 
     const res = await axios.post(
-      // `${config.BASE_URL}/hs`,
+      // `${BASE_URL}/hs`,
       "http://localhost:7777/api/hs",
       JSON.stringify(reqBody),
       {

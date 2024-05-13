@@ -1,13 +1,13 @@
+import { useQuery } from "@tanstack/react-query";
+import { Admin } from "@/utils/types/component";
+import axios from "axios";
 
-import { useQuery } from '@tanstack/react-query';
-import { Admin } from '@/utils/types/component';
-import axios from 'axios';
-import config from "@/configs/config";
+const BASE_URL = import.meta.env.VITE_API;
 
 export const useAdmins = () => {
   return useQuery<Admin[], Error>({
-    queryKey: ['adminsData'],
+    queryKey: ["adminsData"],
     queryFn: () =>
-      axios.get<Admin[]>(`${config.BASE_URL}/admin`).then((res) => res.data),
+      axios.get<Admin[]>(`${BASE_URL}/admin`).then((res) => res.data),
   });
 };

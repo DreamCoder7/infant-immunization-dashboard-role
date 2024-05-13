@@ -1,10 +1,12 @@
 import config from "@/configs/config";
 import axios from "axios";
 
+const BASE_URL = import.meta.env.VITE_API;
+
 async function getAllHealthProfessionals() {
   try {
     const res = await axios.get(
-      `${config.BASE_URL}/user/employee/all?role=HEALTH_PROFETIONAL`,
+      `${BASE_URL}/user/employee/all?role=HEALTH_PROFETIONAL`,
       {
         headers: {
           "Content-Type": "application/json",

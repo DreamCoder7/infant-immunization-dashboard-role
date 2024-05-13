@@ -1,0 +1,9 @@
+ enum RoleType {
+  ADMIN = "ADMIN",
+  SUPER = "SUPER",
+  MANAGER = "MANAGER",
+  RECEPTION = "RECEPTION",
+  HEALTH_PROFETIONAL = "HEALTH_PROFETIONAL",
+}
+
+export {RoleType}
